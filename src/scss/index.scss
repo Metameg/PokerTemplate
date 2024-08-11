@@ -6,6 +6,9 @@ body, html {
     font-family: Arial, sans-serif;
     background-color: #000;
     color: #fff;
+    background: url('../assets/images/dark-gradient.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .section-title {
@@ -67,9 +70,6 @@ body, html {
 }
 
 .hero {
-    background-image: url('clubwpt-background.png');
-    background-size: cover;
-    background-position: center;
     padding: 60px 20px;
     text-align: center;
     position: relative;
@@ -141,7 +141,4 @@ body, html {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background: url('../assets/images/dark-gradient.png');
-    background-size: cover;
-    background-repeat: no-repeat;
 }
