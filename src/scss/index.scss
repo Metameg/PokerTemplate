@@ -1,0 +1,147 @@
+/* styles.scss */
+@import 'variables.scss';
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    padding: 0 80px; 
+    font-size: 2.5rem; 
+}
+  
+.section-title::before,
+.section-title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 2px; 
+    background-color: $accent-color; 
+}
+  
+.section-title::before {
+    left: 0;
+    transform: translate(-100%, -50%); /* Positioning the left line */
+}
+
+.section-title::after {
+    right: 0;
+    transform: translate(100%, -50%); /* Positioning the right line */
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    .nav-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+
+        li {
+            margin: 0 15px;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 1.2em;
+                transition: color 0.3s ease;
+                &:hover {
+                    color: #f39c12;
+                }
+            }
+        }
+    }
+}
+
+.hero {
+    background-image: url('clubwpt-background.png');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    color: #fff;
+
+    .hero-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+
+        .hero-text {
+            margin-bottom: 20px;
+            h1 {
+                font-size: 2em;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+            h2 {
+                font-size: 1.5em;
+                font-weight: 300;
+            }
+        }
+
+        .hero-logo {
+            max-width: 500px;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .cta-button {
+            background-color: $accent-color;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 30px;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: $accent-color-hover;
+            }
+        }
+
+        .no-purchase {
+            font-size: 0.8em;
+            color: #ccc;
+            margin-top: 20px;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('../assets/images/felt-background.jpg'); /* Overlay to darken the background */
+        z-index: 1;
+    }
+}
+
+.promotions-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: url('../assets/images/dark-gradient.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
